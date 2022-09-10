@@ -83,18 +83,19 @@ button{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 10px;
     background-color: rgba(0,0,0,0.73);
     min-height: 5rem ;
     position: sticky;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 8px 8px;
     top: .1px;
 }
 .nav-sect{
     transition: all .4s ease-in-out;
     font-size: 1.2rem;
     display: flex;
-    gap: 1.2rem;
+    gap: .5rem;
 }
 .nav-a{
     display: flex;
@@ -102,14 +103,31 @@ button{
 }
 .fa-solid{
     color: var(--color-bg-);
+    padding: 3px;
 }
 .fa-solid:hover{
-    transform: scale(1.2);
+    transform: translateY(-7px);
     border-bottom:1px solid var(--color-primary3);
-    transition: all .4s ease-in-out;
+    transition: all .5s ease-in-out;
 }
-.nav-icono{
-    border-radius: 10%;
+.icono-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icono-container:hover{
+    transform: scale(1.1);
+    transition: all .4s ease-in-out;
+    cursor:pointer;
+}
+.icono-nav{
+    min-width: 3rem;
+}
+.p-icono{
+    display: block;
+    font-size: 1rem;
+    color: var(--color-secondary3);
 }
 /* Cards-container */
 .cards-container{
@@ -214,9 +232,21 @@ button{
         min-width: 10rem;
         border-radius: 20%;
     }
+    .nav-sect{
+        gap: 1.5rem;
+    }
     .nav-icono{
         border-radius: 10%;
         min-width: 10%;
+    }
+    .p-icono{
+        display: none;
+    }
+    .fa-solid{
+        scale: 1.2;
+    }
+    .fa-solid:hover{
+        transform: scale(1.3);
     }
     .p-nav{
         display: none;

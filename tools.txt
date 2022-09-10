@@ -1,0 +1,2 @@
+Netlify.app (host y sub-dominio).
+Http security..
