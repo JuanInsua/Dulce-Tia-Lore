@@ -160,6 +160,9 @@ button{
         -webkit-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
         -moz-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
 }
+.p-section{
+    max-width: 70%;
+}
 /*--------------------- Formulario SECTION ---------------------*/
 .form-container{
     display: flex;
@@ -311,6 +314,9 @@ button{
     /*--------------------- Cards-container ---------------------*/
     .card{
         min-width: 80%;
+    }
+    .p-section{
+        max-width: 100%;
     }
     /*--------------------- Formulario SECTION ---------------------*/
     .form-container{
