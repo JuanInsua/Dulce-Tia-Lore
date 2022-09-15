@@ -43,42 +43,7 @@ button{
     height: 25px;
     width: 80px;
 }
-/* Main-container */
-.main-container{
-    height: 80vh;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-bg-);
-    box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
-    -webkit-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
-    -moz-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
-}
-.inicio{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    height: 80vh;
-    font-size: 2.5rem;
-    box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
-    -webkit-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
-    -moz-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
-}
-.bg-img{
-    background-image:url(/img/cookies\ 4.png) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    opacity: 1;
-    width: 100%;
-    height: 80vh;
-    z-index: -1;
-}
+/* ---------------------Nav-container--------------------------- */
 .check-input{
     -webkit-appearance: none;
     visibility: hidden;
@@ -93,9 +58,9 @@ button{
     justify-content: space-around;
     background-color: rgba(0,0,0,0.70);
     min-height: 10rem ;
-    position: sticky;
+    position: fixed;
     border-radius: 0 0 8px 8px;
-    top: .1px;
+    width: 100%;
 }
 .ol-nav{
     display: flex;
@@ -134,7 +99,43 @@ button{
     display: block;
     color: var(--color-secondary3);
 }
-/* Cards-container */
+/* ---------------------Main-container--------------------------- */
+.main-container{
+    height: 80vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-);
+    box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
+    -webkit-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
+    -moz-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
+}
+.inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 80vh;
+    font-size: 2.5rem;
+    box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
+    -webkit-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
+    -moz-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
+}
+.bg-img{
+    background-image:url(/img/cookies\ 4.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 1;
+    width: 100%;
+    height: 80vh;
+    z-index: -1;
+}
+/*--------------------- Cards-container ---------------------*/
 .cards-container{
     height: 100%;
     width: auto;
@@ -152,22 +153,22 @@ button{
     width: 80%;
     margin: 2rem;
     padding: 2rem;
-    gap: 3rem;
+    gap: 2rem;
     background-color: var(--color-secondary3);
         border-radius: 40px;
         box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
         -webkit-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
         -moz-box-shadow: -1px 12px 51px -13px rgba(0,0,0,0.73);
 }
-/* Formulario SECTION ADDED*/
+/*--------------------- Formulario SECTION ---------------------*/
 .form-container{
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
 }
 .card-form{
-    width: 30rem;
+    min-width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -180,6 +181,7 @@ button{
     border-bottom: 1px solid #6A0888;
     background-color: transparent;
     resize: none;
+    text-align: center;
 }
 .form-input:hover{
     transform: scale(1.1);
@@ -202,13 +204,13 @@ button{
     max-width:52vh;
     border-radius: 10px;
 }
-/* Donde estamos*/
+/* --------------------- Donde estamos SECTION --------------------- */
 .iframe-donde{
     min-width:80%;
     height:400px;
     border-radius: 10px;
 }
-/* Footer-Container */
+/*--------------------- Footer-Container ---------------------*/
 .footer-container{
     width: 100%;
     min-height: 7rem;
@@ -237,27 +239,32 @@ button{
     transform: scale(1.3);
     color: var(--color-primary3);
 }
-/* swaper-button */
-.swaper-button{
+/*--------------------- swaper-button COMPONENT ---------------------*/
+.uppper-button{
     font-size: 1.2rem;
+    transition: all .8s ease-in-out;
+}
+.uppper-button:hover{
+    transform: translateY(-1rem) scale(1.1);
     transition: all .8s ease-in-out;
 }
 .fa-up-long{
     color: var(--color-secondary1);
 }
-.swaper-button:hover{
-    transform: translateY(-1rem) scale(1.1);
-    transition: all .8s ease-in-out;
-}
-@media only screen and (max-width: 600px){
-    .inicio{
-        font-size: 2rem;
+
+@media handheld, screen and (max-width: 599px){
+    /* Componentes independientes */
+    img{
+        max-width: 4.5rem;
+        border-radius: 20%;
     }
+    /* ---------------------Nav-container--------------------------- */
     .nav-icono{
         border-radius: 10%;
         min-width: 10%;
     }
     .nav-container{
+        min-height: 8rem ;
         justify-content: space-around;
     }
     .check-nav{
@@ -281,8 +288,8 @@ button{
         font-size: 3rem;
     }
     .ol-nav{
+        gap: .5rem;
         display: none;
-        row-gap: 1rem;
     }
     #check:checked ~ .ol-nav{
         display: flex;
@@ -297,13 +304,17 @@ button{
     .p-nav{
         display: none;
     }
+    /* ---------------------Main-container--------------------------- */
+    .inicio{
+        font-size: 2rem;
+    }
+    /*--------------------- Cards-container ---------------------*/
     .card{
         min-width: 80%;
     }
-    .iframe-donde{
-        max-width:80%;
-        height:400px;
-        border-radius: 10px;
+    /*--------------------- Formulario SECTION ---------------------*/
+    .form-container{
+        flex-flow: row wrap;
     }
     .card-form{
         min-width: 95%;
@@ -312,6 +323,13 @@ button{
         min-width: 12rem;
         border-radius: 10px;
     }
+    /* --------------------- Donde estamos SECTION --------------------- */
+    .iframe-donde{
+        max-width:80%;
+        height:400px;
+        border-radius: 10px;
+    }
+    /*--------------------- Footer-Container ---------------------*/
     .footer-container{
         flex-direction: column-reverse;
         gap: 1.4rem;
@@ -324,11 +342,33 @@ button{
         flex-direction: row;
         gap: 2rem;
     }
-    .swaper-button{
-        margin-top: .5rem;
+    /*--------------------- swaper-button COMPONENT ---------------------*/
+    .uppper-button{
+        margin-top: 5px;
+    }
+    .uppper-button:hover{
+        transform: none;
     }
     .fa-brands:hover{
         transform: none;
         color: var(--color-bg-);
+    }
+}
+
+@media handheld, screen and (min-width: 600px) and (max-width: 1023px) {
+    .p-icono{
+        display: none;
+    }
+    /*--------------------- Formulario SECTION ---------------------*/
+    .form-container{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .card-form{
+        min-width: 80%;
+    }
+    .video-form{
+        min-width: 12rem;
+        border-radius: 10px;
     }
 }
